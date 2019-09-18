@@ -1,5 +1,5 @@
 1.一个完整的JavaScript结构包括哪些部分?
-答:原生EMAScript,Dom文档对象，
+答:原生EMAScript,Dom文档对象，BOOM浏览器文档对象
 
 2.JavaScript脚本分成哪几种?
 答:内部脚本，外部脚本
