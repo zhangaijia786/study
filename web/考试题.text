@@ -1,1 +1,10 @@
+1.一个完整的JavaScript结构包括哪些部分?
+答:原生EMAScript,Dom文档对象，
 
+2.JavaScript脚本分成哪几种?
+答:内部脚本，外部脚本
+
+3.JavaScript错误有哪几种?特点是什么?
+答:执行错误，程序错误
+4.JavaScript的数据类型包括什么?分别写出.
+答:基本数据类型：数字，字符串，nall,undefined,object,布尔
