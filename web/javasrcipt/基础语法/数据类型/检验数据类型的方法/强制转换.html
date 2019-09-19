@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+         var a=undefined;
+         var b=null;
+         var c=function(){alert(1)};
+         
+         console.log(Number("352"));//352
+         console.log(Number("nihao"));//NaN
+         console.log(Number(true));//1
+         console.log(Number(false));//0
+         console.log(Number(''));//0
+
+         console.log(String("352"));//352
+         console.log(String(true));//true
+         console.log(String(false));//flase
+
+         console.log(Boolean(654));//true
+         console.log(Boolean('nihao'));//true
+         console.log(Boolean(''));//flase
+         console.log(Boolean(0));//flase
+         console.log(Boolean(NaN));//flase
+    </script>
+</body>
+</html>
