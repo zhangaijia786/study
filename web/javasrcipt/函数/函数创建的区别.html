@@ -7,12 +7,18 @@
     <title>Document</title>
 </head>
 <body>
+
+   
     <script>
-        var a =10;
-        var b ='10';
-        console.log('a+b:'+isNaN(a+b));//false
-        console.log('a-b:'+isNaN(a-b));//false
-        console.log('NaN:'+isNaN(NaN));//true
+        a();//3
+        function a (){
+            alert(3);
+        }
+
+        b();//b is not a function
+        var b = function (){
+            alert(4);
+        }
     </script>
 </body>
 </html>

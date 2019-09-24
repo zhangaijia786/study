@@ -8,11 +8,10 @@
 </head>
 <body>
     <script>
-        var a =10;
-        var b ='10';
-        console.log('a+b:'+isNaN(a+b));//false
-        console.log('a-b:'+isNaN(a-b));//false
-        console.log('NaN:'+isNaN(NaN));//true
+        function aaa(x,y,z){
+           console.log(arguments[3]);
+        }
+        aaa('a','b','c','d');
     </script>
 </body>
 </html>

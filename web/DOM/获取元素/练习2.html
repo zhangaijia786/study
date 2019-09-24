@@ -7,12 +7,15 @@
     <title>Document</title>
 </head>
 <body>
+    <div>
+        <ul id="mydiv">
+        </ul>
+    </div>
     <script>
-        var a =10;
-        var b ='10';
-        console.log('a+b:'+isNaN(a+b));//false
-        console.log('a-b:'+isNaN(a-b));//false
-        console.log('NaN:'+isNaN(NaN));//true
+        var div=document.getElementById('mydiv');
+       console.log(div.innerHTML);
+       
+       div.innerHTML='<li>苹果</li> <li>西瓜</li> <li>草莓</li>'; 
     </script>
 </body>
 </html>

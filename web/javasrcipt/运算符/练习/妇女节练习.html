@@ -7,12 +7,13 @@
     <title>Document</title>
 </head>
 <body>
+    <input type="date" id="d">
     <script>
-        var a =10;
-        var b ='10';
-        console.log('a+b:'+isNaN(a+b));//false
-        console.log('a-b:'+isNaN(a-b));//false
-        console.log('NaN:'+isNaN(NaN));//true
+       var d = document.getElementById('d');
+       var nw = confirm('女王请点击确定');
+       d.oninput = function(){
+           nw && d.value =='2019-03-08'? alert('五折优惠') : alert('没有优惠')
+       }
     </script>
 </body>
 </html>

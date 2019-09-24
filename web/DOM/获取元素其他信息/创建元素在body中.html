@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+       .blue{
+           background-color:blue;
+       }
+    </style>
 </head>
 <body>
     <script>
-        var a =10;
-        var b ='10';
-        console.log('a+b:'+isNaN(a+b));//false
-        console.log('a-b:'+isNaN(a-b));//false
-        console.log('NaN:'+isNaN(NaN));//true
+        document.body.innerHTML='<ul><li>111</li> <li>222</li> <li>333</li></ul>';
+        document.getElementsByTagName('li')[1].setAttribute('class','blue');
     </script>
 </body>
 </html>

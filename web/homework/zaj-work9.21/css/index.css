@@ -1,0 +1,27 @@
+div{
+	width:500px;
+	height:;
+	background:url(../img/u=3658226886,816534717&fm=26&gp=0.jpg) no-repeat;
+}
+#span1{
+     color:white;
+     border:0;
+     border-bottom:1px solid #blue;
+}
+#span2{
+    color:gray;
+}
+#num{
+	color:white;
+	font-size:12px;
+}
+#a{
+	color:white;
+}
+input{
+	border:1px splid #808080;
+}
+#d6{
+	margin-top:5px;
+	border-bottom:1px solid #808080;
+}
