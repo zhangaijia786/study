@@ -1,0 +1,40 @@
+1.    var div=document.getElementById('div')
+     console.log(div)+
+      var div=document.getElementByTagName('div')
+      console.log('div')
+      var div1=document.getElementByName('div1')
+      console.log('div1)
+      var a=document.getElementsByName('a');
+     console.log(a);
+
+      
+ 2.<script>
+         var div=document.getElementByTagName('div')
+         for(var i=0;i>div.length;i++）{
+             div[3]=div1;
+         }
+         console.log(div[3].innnerHTML)
+    </script>
+         
+         
+ 3.querySelector()和querySelectorAll()可以依靠选择器找到元素,但是前者只能找到元素列表的第一个元素,
+ 而后者可以全部找到.
+ 
+ 4. var mydiv=document.getElementById('div')
+    mydiv.innnerHTML(<a href="#"></a>)
+
+ 
+ 5.<div class='box red' id='mydiv'> </div>
+      <script>
+         div.className=blue;
+         var a=document.getElementsByName('a');
+         console.log(a)
+
+       
+
+
+         
+         
+         
+   
+ 
