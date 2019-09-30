@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    
+       <input type="date" id="d">
+       <script>
+           var d = document.getElementById('d');
+           var nw = confirm('女王请点击确定');//返回值肯定是布尔值
+           
+           //先有一个事件才会有值
+        d.oninput = function(){
+           var dv = d.value;//肯定返回一个字符串 并且格式为0000-00-00
+           //d.value == '2019-03-08'  返回值 对 错
+           nw && dv == '2019-03-08'? alert('五折优惠') : alert('没有优惠');
+        }
+    </script>
+
+   
+</body>
+</html>

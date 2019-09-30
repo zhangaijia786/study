@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="date" id="d">
+    <script>
+       var d = document.getElementById('d');
+       var nw = confirm('女王请点击确定');
+       d.oninput = function(){
+           nw && d.value =='2019-03-08'? alert('五折优惠') : alert('没有优惠')
+       }
+    </script>
+</body>
+</html>

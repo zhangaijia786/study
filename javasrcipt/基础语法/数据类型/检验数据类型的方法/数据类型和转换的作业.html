@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="in1">
+    <input type="text" id="in2"> 
+     <button id="btn">+</button>
+    <div id="show"></div>
+    <script>
+        //获取所有元素
+        var in1= document.getElementById('in1');
+        var in2= document.getElementById('in2');
+        var btn= document.getElementById('btn');
+        var show= document.getElementById('show');
+        //点击计算按钮
+         btn.onclick=function(){
+             //拿到用户的输入内容
+             //将内容转换为数字类型（整数）
+            var in1v=parseInt(in1.value);
+            var in2v=parseInt(in2.value);
+             console.log(in1v);
+             //判断
+             if(isNaN(in1v)){
+                 alert("请输入数字");
+             }else if(isNaN(in2v)){
+                alert("请输入数字");
+             }else{
+                show.innerHTML=parseInt(in1.value)+parseInt(in2.value);
+             }
+                 
+        }
+    </script>
+</body>
+</html>
