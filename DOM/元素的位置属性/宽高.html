@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+    } 
+    div{
+        width:100px;
+        height:100px;
+        padding:10px;
+        margin:5px;
+        border:1px solid black;
+        background-color: red;
+        margin:100px auto;
+    }
+    </style>
+</head>
+<body>
+    <div id="mydiv"></div>
+    <script>
+       var mydiv=document.getElementById('mydiv');
+       console.log(mydiv.style );//这种方法只能拿到内联样式
+       console.log(mydiv.offsetWidth);
+
+       console.log(mydiv.clientWidth);
+       console.log(mydiv.clientHeight)
+    </script>
+</body>
+</html>
