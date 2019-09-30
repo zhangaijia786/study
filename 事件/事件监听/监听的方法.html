@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">按钮1</button>
+    <button id="btn2">按钮2</button>
+    <script>
+      var btn1=document.getElementById('btn1');
+      var btn2=document.getElementById('btn2');
+      //    增加监听       监听事件，方法，冒泡
+      //bnt2.addEventListener('click',a,false);
+
+      //bnt2.addEventListener('mousedown',a,false); 
+      btn1.addEventListener('mousedown',a,false);    
+      btn1.addEventListener('mouseup',b,false);
+
+      btn2.addEventListener('mousedown',a,false);
+      btn2.addEventListener('mouseup',c,false);
+
+       function a(){
+           alert('鼠标按下');
+       }      
+
+       function b(){
+           alert('鼠标抬起1');
+       }
+       function c(){
+           alert('鼠标抬起2');
+       }
+
+      //ie监听的方法
+      bnt1.attachEvent('onclick',c);
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+       img{
+           width:200px;
+           display: block;
+           border:1px solid black;
+        }
+    </style>
+</head>
+<body> 
+    <img src="3f3eaf8e3533ca79aed4628c93b7b3f9.jpg" alt="" id="img">
+    <script>
+       var img = document.getElementById('img');
+       var w =0,s=0,a=0,d=0;  
+       document.onkeydown = function(e){
+          alert('按下');
+       }
+       document.onkeydown = function(e){
+        // alert(e.keyCode);
+        //37左
+        //38上
+        //39右
+        //40下
+        switch(e.keyCode){
+            case 37: 
+                img.style.marginLeft = a * -50 + 'px';
+                a++;
+                break;
+            case 38: 
+                img.style.marginTop = w * -50 + 'px';
+                w++;
+                break;
+            case 39: 
+                img.style.marginLeft = d * 50 + 'px';
+                d++;
+                break;
+            case 40:
+                img.style.marginTop = s * 50 + 'px';
+                s++;
+                break;
+           }
+        }
+        document.onkeyup=function(e){
+             alert('抬起来了')
+        }
+    </script>
+</body>
+</html> 

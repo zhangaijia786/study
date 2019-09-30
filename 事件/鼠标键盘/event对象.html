@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       //事件触发时     调用的函数(event)
+       document.onclick=function(e){
+         //   非ie||    低版本ie
+         var ev=e||window.event;
+         console.log(e.clientX);
+       }
+    </script>
+</body>
+</html>

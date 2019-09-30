@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            position:relative;
+        }
+       div{
+           width:100px;
+           height:100px;
+           background-color:red;
+           position:absolute;
+       }
+    </style>
+</head>
+<body>
+    <div id="mydiv"></div>
+    <script>
+      var mydiv=document.getElementById('mydiv');
+                //onclick
+       mydiv.onmousedown=function(e){
+          var ev=e||window.event;
+          var xcha=ev.clientX-mydiv.offsetLeft;
+          var ycha=ev.clientY-mydiv.offsetTop;
+          //鼠标点击div div会跟随鼠标移动
+          document.onmousemove=function(e){
+            var ev=e||window.event;
+            mydiv.style.left=ev.clientX-xcha+'px';
+            mydiv.style.top=ev.clientY-ycha+'px';
+          }
+          //让鼠标移走后  div在原地
+          document.onmouseup=function(){
+              document.onmousemove=numll;
+              document.onmouseup=null;
+          }
+          //取消冒泡
+          return false;
+        }
+    </script>
+</body>
+</html>
