@@ -1,0 +1,101 @@
+.items .item{
+  width:210px;
+  float:left;
+  margin-right:30px;
+}
+.items .item:nth-child(4){
+    margin-right:0;
+}
+.items .item > a{
+    display: block;
+    width:210px;
+    border:1px solid #ddd;
+    box-sizing:border-box;
+    border-radius: 3px;
+    position: relative;
+    margin-bottom: 11px;
+}
+.items .item > a img{
+    display: block;
+    width:208px;
+    height:208px;
+}
+.items .item a .eye{
+    width:40px;
+    height:40px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    border-radius: 50%;
+    margin-left:-10px;
+    margin-top:-10px;
+    background-color: #73b720;
+    opacity: 0;
+    transform: scale(1.2);
+    transition: 0.5s;
+} 
+.items .item a .eye>img{
+	width:24px;
+	height:24px;
+	position: relative;
+	top:10px;
+	left:8px;
+}
+.items .item a .eye:hover{
+	background-color:#fd7e14;
+}
+.items .item a:hover .eye{
+   opacity: 1;
+   transform: scale(1);
+}
+.items .item > p {
+	font-size:14px;
+	font-weight:400;
+    color:#666;
+}
+.items .item .star{
+	height:24px;
+	margin-top:10px;
+}
+.items .item .star img{
+	width:18px;
+	height:18px;
+}
+.items .item h5{
+    color:red;
+    font=size:15px;
+    font-weight:600;
+}
+.items .item h5{
+    transition: 0.5s;
+}
+.items .item .choose{
+    opacity: 0;
+    transition:0.5s;
+}
+.items .item .choose a{
+    display: inline-block;
+    width:40px;
+    height:40px;
+    background-color: #e5e8ec;
+    border-radius: 50%;
+    margin-right:10px;
+}
+.items .item .choose a:hover{
+	background-color:#fd7e14;
+}
+.items .item .choose a img{
+	width:20px;
+	height:20px;
+	position: relative;
+	top:10px;
+	left:10px;
+}
+.items .item:hover .choose{
+    opacity: 1;
+    transform: translateY(-20px);
+}
+.items .item:hover h5{
+    opacity: 0;
+    transform: translateY(-10px);
+}
