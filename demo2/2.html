@@ -4,39 +4,132 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
-        button{
-            width:50px;
-            height:50px;
-            border-radius: 50%;
-            background-color:#ddd;
-            border:0;
+        * {
+            margin: 0;
+            padding: 0;
         }
-        .active{
-            background-color: red;;
+
+        body {
+            background-color: #d5d5d5;
+        }
+
+        .tab {
+            width: 600px;
+            height: 400px;
+            margin: 20px auto;
+            position: relative;
+            box-shadow: 5px 5px 8px #333;
+        }
+
+        .pic {
+            width: 600px;
+            height: 400px;
+        }
+
+        .pic>div {
+            display: none;
+        }
+
+        .num {
+            position: absolute;
+            width: 220px;
+            right: 0;
+            bottom: 10px;
+        }
+
+        .num a {
+            width: 30px;
+            height: 30px;
+            text-decoration: none;
+            text-align: center;
+            line-height: 30px;
+            font-size: 13px;
+            display: inline-block;
+            border-radius: 50%;
+            background-color: #222;
+            color: white;
+            box-shadow: 0 0 4px #ddd;
+            margin-left: 8px;
+        }
+
+        .control {
+            color: white;
+            font-size: 50px;
+            width: 100%;
+            position: absolute;
+            z-index: 30px;
+            top: 160px;
+            overflow: hidden;
+        }
+
+        .control span {
+            display: block;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 55px;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .control span:nth-child(1) {
+            float: left;
+        }
+
+        .control span:nth-child(2) {
+            float: right;
+        }
+
+        .num .active {
+            background-color: #bbb;
+            box-shadow: 0 0 5px #333;
+            transform: scale(1.1);
+            color: #222;
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
-    <button>1</button>
-    <button>2</button>
-    <button>3</button>
-    <button>4</button>
-    <button>5</button>
-    <button>6</button>
-    <button>7</button>
-    <button>8</button>
-    <button>9</button>
-    <button>10</button>
+    <div class="tab">
+        <div class="pic" id="pic">
+            <div style="display: block;">
+                <img src="1.jpg" alt="">
+            </div>
+            <div>
+                <img src="2.jpg" alt="">
+            </div>
+            <div>
+                <img src="3.jpg" alt="">
+            </div>
+            <div>
+                <img src="4.jpg" alt="">
+            </div>
+            <div>
+                <img src="5.jpg" alt="">
+            </div>
+        </div>
+        <div class="num" id="num">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+        </div>
+        <div class="control">
+            <span id="l">&lt;</span>
+            <span id="r">&gt;</span>
+        </div>
+    </div>
     <script>
-        var button=document.getElementsByName('button');
-         for(var i=0;i<button.length;i++){
-            button.onclick=function(){
-                for(var j=0;j<button.length;j++){
-                    button.className='';
-                }
-                this.className='active';
-            }
-        }
+       var pic=document.getElementById('pic');
+       var picdiv=pic.getElementsByName('div');
+       var num=document.getElementById('num');
+       var a=num.getElementsByTagName('a');
+       
+       for(var i=0;i<a.length;i++){
+           
+       }
     </script>
 </body>
 </html>

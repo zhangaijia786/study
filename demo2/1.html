@@ -132,9 +132,32 @@
         var picdiv = pics.getElementsByTagName('div'); //5
 
         var 数字 = 0;
+        var timer=null;
+        //var a=0;   数字
+        //var b='';   添加内容
+        //var c=null;    对象
 
-        //点击右
-        右.onclick = function () {
+        //定时器
+        clearInterval(timer);
+        timer=setInterval(moveRight,2000);
+        //清除定时器
+        //鼠标移出  
+        for(var o=0;o<picdiv.length;o++){
+            picdiv[o].onmousemove=function(){
+                clearInterval(timer);
+            }
+        }    
+        //鼠标移入
+        for(var o=0;o<picdiv.length;o++){
+            picdiv[o].onmouseout=function(){
+                clearInterval(timer);
+                timer=setInterval(moveRight,2000);
+            }
+        }
+      
+
+        //封装一个向右的方法
+        function moveRight() {
             数字++; 
             //判断是否在合理范围里
             if(数字 == as.length){
@@ -148,7 +171,9 @@
             picdiv[数字].style.display = 'block';
         }
 
-
+        //点击右
+        右.onclick=moveRight;
+        
         //点击左
         左.onclick = function () {
             数字--;
@@ -163,6 +188,8 @@
             picdiv[数字].style.display = 'block';
         }
 
+
+
         //点击数字按钮(只改自己的样式)
         for (var i = 0; i < as.length; i++) {
             //i = 0 1 2 3 4
@@ -173,6 +200,7 @@
             //as[2].给它一个属性值 = 2
             //as[3].给它一个属性值 = 3
             //as[4].给它一个属性值 = 4
+            //给按钮一个属性值为z
             as[i].setAttribute('z', i); // z = i
             as[i].onclick = function () {
                 for (var j = 0; j < as.length; j++) {
@@ -182,6 +210,7 @@
                 this.className = 'active';
                 //div[z的值 当前的a=this.getAttribute('z')]
                 picdiv[this.getAttribute('z')].style.display = 'block';
+                数字=this.getAttribute('z');
             }
         }
     </script>
