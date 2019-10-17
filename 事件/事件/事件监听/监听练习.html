@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+        }
+       img{
+           width:100px;
+           height:100px;
+       }
+    </style>
+</head>
+<body>
+    <div id="div1"><img src="d286ccb2a753d2222670eb46757d1c80.png"></div>
+    <div id="div2"><img src="d4c913e8d35c573ba5375dfb56609d72.jpg"></div>    
+    
+    <script>
+        var div1=document.getElementById('div1');
+        var div2=document.getElementById('div2');
+        div1.addEventListener('click',a,false);
+        div2.addEventListener('click',a,false);
+        div1.addEventListener('dblclick',b,false);
+        div2.addEventListener('dblclick',b,false);
+        function a(){
+            this.style.backgroundColor="red";
+        }
+        function b(){
+            alert('欢迎进入微信和QQ浏览器');
+        }
+    </script>
+</body>
+</html>
