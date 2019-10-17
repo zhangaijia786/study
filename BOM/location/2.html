@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="" name="" id="name" placeholder="请输入用户名">
+    <input type="" name="" id="pass" placeholder="请输入密码">
+    <button id="btn">登录</button>
+     <script>
+        var name=document.getElementById('name');
+        var pass=document.getElementById('pass');
+       btn.onclick=function(){
+          var name=document.getElementById('name');
+          var num=name.value;
+          if(pass.value=="123"){
+              location.href="3.html?"+num;
+          }else{
+              alert('登录失败');
+          }
+       }
+     </script>
+</body>
+</html>

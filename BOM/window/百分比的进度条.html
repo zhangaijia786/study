@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+      #box{
+          width:500px;
+          height:30px;
+          border:1px solid black;
+      }
+      #bar{
+          width:0;
+          height:30px;
+          background-color: brown;
+      }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="bar"></div>
+    </div>
+    <script>
+        var box=document.getElementById('box');
+        var bar=document.getElementById('bar');
+        var times=null;
+        var num=0;
+        // times=setInterval(function(){
+        //   num++;
+        //   if(num>100){
+        //       clearInterval(times);
+        //   }else{
+        //       bar.style.width=num+'%';
+        //   }
+        // },40)
+
+        box.onclick=function(e){
+            var ev=e||window.event;
+            var i=e.clientX-box.offsetLeft;
+            bar.style.width=i+'px';
+        }
+    </script>
+</body>
+</html>
