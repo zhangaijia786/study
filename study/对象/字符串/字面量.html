@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var str="123456";
+       var num=1234;
+       console.log(str.indexOf('3'));//字符
+       console.log(str.charAt(2));//返回下标值对应的内容
+       console.log(num.toString(2));//要转的变量
+
+       var ss1=new String('你好');
+       var ss2=new String('王小明好');
+       //console.log(String.prototype);
+       //console.log(ss1);
+       var ss3=ss1.concat(ss2)
+       console.log(ss3);
+       console.log(ss3.lastIndexOf('好'));//从后查找字符
+       console.log(ss3.match(/好/g));//返回一个数组
+    </script>
+</body>
+</html>

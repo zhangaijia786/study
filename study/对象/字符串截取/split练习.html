@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ul">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+         //练习：1.在一个字符串中存储10个人人名，用逗号隔开
+         //2.在页面上创建一个无序列表
+         //3.将这10人名分别动态插入到无序列表中
+         var name="jack,tom,jan,kangkang,michel,lity,luck,koala,datou,xioabai";
+         var ul=document.getElementById('ul');
+         var li=document.getElementsByTagName('li');
+         console.log(li);
+         console.log(name);
+         var c=name.split(',');
+         for(var i=0;i<10;i++){
+             li[i].innerHTML=c[i];
+         }
+    </script>
+</body>
+</html>

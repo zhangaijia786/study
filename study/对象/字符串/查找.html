@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str='nihao,tom';
+        var mstr=str.match(/o/g);
+        console.log(mstr);//返回一个数组
+        var sstr=str.search(/o/g);
+        console.log(sstr);//返回首个匹配的下标值
+        var istr=str.indexOf('o');
+        console.log(istr);//返回首个匹配的下标值
+        var cstr=str.charAt(3);
+        console.log(cstr);//返回首个匹配出来的下标值的字符
+    </script>
+</body>
+</html>

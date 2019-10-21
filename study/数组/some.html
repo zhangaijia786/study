@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1"></h1>
+    <script>
+        var arr=[48,78,98,56,68,84,73,64,88,60,84];
+       function shaixun(a,b,c){
+           return a<60; //true
+       }
+       var narr=arr.some(shaixun);
+       console.log(narr);
+    
+       var chengji=['B','A','B','A','B'];
+       var narr1=chengji.some(function chengji(a,b,c){
+           if(a=='C'){
+               h1.innerHTML='需要考试';
+           }else{
+               h1.innerHTML='免考';
+           }
+       })
+       console.log(narr1);
+    </script>
+</body>
+</html>

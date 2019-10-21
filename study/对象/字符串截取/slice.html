@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //可以用于截取数组
+        var str="nihao,tom";
+        var nstr=str.slice(2.5);
+        //  开始位置  结束位置+1
+        // 无第二个参数，默认值字符数到最后一位
+        console.log(nstr);
+
+        var nstr1=str.slice(-2,-6);
+        //第一个负数会把负数值加上字符的长度    第二个负数负数会化为0
+        console.log(nstr1);
+    </script>
+</body>
+</html>

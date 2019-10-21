@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="请输入编号" id="dl">
+    <button id="btn">登陆</button>
+    <script>
+       var dl=document.getElementById('dl');
+       btn.onclick=function(){
+         if(dl.value.length<8){
+             alert(dl.value.padStart(8,'0'));
+         }else{
+             alert('登陆成功');
+         }
+       }
+    </script>
+</body>
+</html>

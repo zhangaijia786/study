@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="big">
+         <img src="m-0.png" id="imgs"/>
+		</div>
+		<script type="text/javascript">
+			var imgs=document.getElementById("imgs")
+			var srcs=imgs.getAttribute('src')
+			console.log(srcs)
+			var nstr =srcs.substr(0,3)
+			console.log(nstr)
+			imgs.onclick=function(){
+			if(nstr=='m-0'){
+			  imgs.setAttribute('src','m-1.png')
+			}
+			}
+		</script>
+		
+	</body>
+<ml>
