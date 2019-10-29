@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var str='G12344';
+       var reg=/^[a-z,A-Z][0-9,a-z,A-Z]{5}$/;//以字母开头，只能有6位
+       var a=reg.test(str);
+       console.log(a);
+
+       var str1='61234414';
+       var reg1=/^[0-9]{6,8}$/;//只能是数字，6-8位数字
+       var a1=reg1.test(str1);
+       console.log(a1);
+
+       var str2='你好';
+       var reg2=/^[\u4e00-\u9fa5]{0,}$/;      //至少一位汉字，只有汉字
+       var a2=reg2.test(str2);
+       console.log(a2);
+
+       var str3='523128963wefdhhj';
+       var reg3=/^[\u4e00-\u9fa5,0-9,a-z,A-Z,_]+$/;   //中英文数字下划线
+       var a3=reg3.test(str3);
+       console.log(a3);
+
+       var str4='zajquz0818';
+       var reg4=/^[a-z,A-Z][0-9,a-z,A-Z]{5,11}$/;    
+       var a4=reg4.test(str4);
+       console.log(a4);
+
+
+    </script>
+</body>
+</html>

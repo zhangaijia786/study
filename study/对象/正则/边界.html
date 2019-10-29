@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str='1fgghjk8523RFGHJK8754hj';
+        var reg=/^\d/;      //匹配开始
+        var a=reg.test(str);
+        console.log(a);
+
+        var str1='1fgghjk8523RFGHJK8754hj5';
+        var reg1=/\d$/;    //匹配结尾
+        var b=reg1.test(str1);
+        console.log(b);
+
+        var str2='534wer';
+        var reg2=/^\d?[a-z]/;    
+        //以数字开头，数字后面是a-z字符，但数字至多出现一次
+        var c=reg2.test(str2);
+        console.log(c);
+
+        var str3='wer545';
+        var reg3=/^\w?[0-9]/; 
+        var e=reg3.test(str3);
+        console.log(e); 
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1"></h1>
+    <h2 id="h2"></h2>
+    <script>
+     var h1=document.getElementById('h1');
+     var h2=document.getElementById('h2');
+     var aa='{ "userName":"tom","pwd":"123","nicheng":"二狗子"}';
+     var obj={ "userName":"tom","pwd":"123","nicheng":"二狗子"};
+
+     var jsonStr=JSON.parse(aa);//字符串变对象
+     console.log(jsonStr)
+     var str=JSON.stringify(obj);//对象变字符串
+     console.log(str);
+    //  console.log(typeof(str));//string
+     h1.innerHTML='欢迎你'+jsonStr.pwd;
+    </script>
+</body>
+<ml>

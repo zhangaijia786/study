@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" placeholder="请输入您的id" id="in1"/><br>
+		<input type="password" placeholder="请输入您的密码" id="in2"><br>
+		<button id="btn">点击</button>
+		<script>
+			var in1=document.getElementById('in1');
+			var in2=document.getElementById('in2');
+			var btn=document.getElementById('btn');
+			var json='{"id":"1101","name":"tom","pwd":"123","nc":"王二狗"}';
+			//获取对象
+			var obj=JSON.parse(json);
+			btn.onclick=function(){
+				//获取input框的value值
+				var v1=in1.value;
+			    var v2=in2.value;
+			    //判断
+				if(v1==obj.id&&v2==obj.pwd){
+					 window.location.href='2.html?'+'id='+obj.id;
+				}else{
+					 alert('输入错误');
+				}
+			}
+		</script>
+	</body>
+</html>

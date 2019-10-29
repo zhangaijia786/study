@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1"></h1>
+    <script>
+    	var json='{"id":"1101","name":"tom","pwd":"123","nc":"王二狗"}';
+    	var obj=JSON.parse(json);
+    	
+    	var ls=location.search;
+    	var d=ls.indexOf('=');
+    	console.log(d);//6
+    	if(obj.id===ls.slice(d+1)){
+    		h1.innerHTML='欢迎你'+obj.nc;
+    	}
+    </script>
+</body>
+</html>

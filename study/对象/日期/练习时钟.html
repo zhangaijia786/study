@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+      *{
+          margin:0;
+          padding:0;
+      }
+      .clock{
+          width:200px;
+          height:200px;
+          margin:50px auto;
+          border:5px solid black;
+          border-radius: 50%;
+          position: relative;
+      }
+      ul{
+          width:100%;
+          height:100%;
+          margin:0;
+          padding:0;
+          list-style: none;
+          position: relative;
+      }
+      li{
+          position: absolute;
+          width:2px;
+          height:8px;
+          background-color: black;
+          top:0;
+          left:calc(50% - 1px);
+          transform-origin:center 100px;
+      }
+      li:nth-child(5n+1){
+          height:15px;
+      }
+      .h{
+          width:6px;
+          height:45px;
+          background-color: blue;
+          position: absolute;
+          left:calc(50% - 3px);
+          top:55px;
+          transform-origin:bottom;
+          border-radius: 50% 50% 0 0 ;
+      }
+      .m{
+          width:4px;
+          height:65px;
+          background-color: green;
+          position: absolute;
+          left:calc(50% - 2px);
+          top:35px;
+          transform-origin: bottom;
+          border-radius:50% 50% 0 0 ;
+      }
+      .s{
+          width:2px;
+          height:75px;
+          background-color:red;
+          position: absolute;
+          left:calc(50% - 2px);
+          top:25px;
+          transform-origin: bottom;
+          border-radius:50% 50% 0 0;
+      }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <ul id="ul"></ul>
+        <div id="h" class="h"></div>
+        <div id="m" class="m"></div>
+        <div id="s" class="s"></div>
+    </div>
+    <script>
+        var ul=document.getElementById('ul');
+        var h=document.getElementById('h');
+        var m=document.getElementById('m');
+        var s=document.getElementById('s');
+        var lis='';
+        for(var i=0;i<60;i++){
+            lis +='<li style="transform:rotate('+i*6+'deg);"></li>';
+        }
+        console.log(lis);
+        ul.innerHTML=lis;
+
+        setInterval(timer,1000)
+        function timer(){
+               var time=new Date();
+               var hh=time.getHours();
+               var mm=time.getMinutes();
+               var ss=time.getSeconds();
+
+               var sdeg=ss*6;
+               var mdeg=mm*6+sdeg/60;
+               var hdeg=hh*30+mdeg/60;
+               
+               console.log(hdeg); 
+
+                h.style.transform='rotate('+hdeg+'deg)';
+                m.style.transform='rotate('+mdeg+'deg)';
+                s.style.transform='rotate('+sdeg+'deg)';
+        }
+       
+    </script>
+</body>
+</html>

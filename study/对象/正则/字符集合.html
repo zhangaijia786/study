@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var srt='ewubyfhdsjcx865423SDXFCGVBN';
+       var reg1=/b/g;
+       console.log(srt.match(reg1));
+       var reg2=/[b,h]/g;
+       console.log(srt.match(reg2));
+       var reg3=/[b|h]/g;
+       console.log(srt.match(reg3));
+ 
+       var str1='abcdefg';
+       var reg5=/[a-f]/g;
+       console.log(str1.match(reg5));
+  
+       var str='abcd';
+       var reg4=/[^a,c]/g;    //^反义，在这里面的不要，返回在这个范围里的
+       console.log(str.match(reg4));
+    </script>
+</body>
+</html>

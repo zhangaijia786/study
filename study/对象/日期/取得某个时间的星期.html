@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var time=new Date('2019-9.25');
+       function getWeek(t){
+           var week=['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+           var day=t.getDay();
+           return week[day];
+       }
+       console.log('那天是'+getWeek(time));
+    </script>
+</body>
+</html>

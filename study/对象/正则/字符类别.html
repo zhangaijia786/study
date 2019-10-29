@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str='rhjefdDRFHGV895623tvhgn';
+        var reg=/\d/g;             //数字
+        console.log(str.match(reg));
+
+       var str1='bihaojiayounuli786';
+       var reg1=/\D/g;            //非数字
+       console.log(str1.match(reg1));
+
+       var str2='你好';
+       var reg2=/\w/g;            //字母字节
+       console.log(str2.match(reg2));
+
+       var str3='bihaojiayounuli786';
+       var reg3=/\W/g;            //非字母字节
+       console.log(str3.match(reg3));
+
+       var str4='我艹';
+       var reg4=/艹/g;
+       console.log(str4.replace(reg4,'*'));
+
+       var str5='bihao  jiayounuli786';
+       var reg5=/\s/g;            //空白字符制表\换行符\换页符和其他的空格
+       console.log(str5.match(reg5));
+
+       var str6='bihaojiayounuli786';
+       var reg6=/\S/g;            //
+       console.log(str6.match(reg6));
+    </script>
+</body>
+</html>
