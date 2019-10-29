@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="sign in .css">
+</head>
+<body>
+    <div class="warp">
+        <div class="login">
+            <div id="xx">
+                <img src="logo.png">
+                <h1>学生管理系统</h1>
+            </div>
+             <input type="text" placeholder="用户名" id="username">
+             <input type="password" placeholder="密码" id="passwoed">
+             <input type="text" placeholder="验证码" id="rcode"><span id="vcode"></span>
+             <button id="login">登  录</button>
+             <p>还没有账户？<a href="sign up.html">立刻创建</a></p>
+        </div>
+    </div>
+    <script>
+        //获取所有元素
+         var username=document.getElementById('username');
+         var passwoed=document.getElementById('passwoed');
+         var rcode=document.getElementById('rcode');
+         var vcode=document.getElementById('vcode');
+         var login=document.getElementById('login');
+
+         //模拟验证码
+         var code='';//存放验证码
+         function createCode(){
+                  var codes=[0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f','g','h','i',
+                             'j','k','l','m','n','o','p','q','r','s','t','u','v','w',
+                             'x','y','z','A','B','C','D','E','F','G','H','I','J','K',
+                             'L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
+                            ];
+                  var codeLg=4;
+                  for(var i=0;i<codeLg;i++){
+                  	  var newCode=Math.floor(Math.random()*codes.length);//随机返回
+                  	  code=code+codes[newCode];
+                  }
+                  vcode.innerHTML=code;
+         }
+         //调用随机生成验证码
+         createCode();
+         
+        //在点击登录的时候，收集用户输入的内容
+        login.onclick=function(){
+            var uname=username.value;
+            var pwd=passwoed.value;
+            var rcodev=rcode.value;
+            //ajax
+                //判断正确或错误,正确说明有数据，错误说明没有数据--》后台判断
+                    //模拟数据
+                    var jsonStr='{"id":"1101","uname":"tom","pwd":"123"}';
+                    //将模拟数据的字符串，变成对象
+                    var json=JSON.parse(jsonStr);
+                    //验证码是否正确
+                    if(vcode.innerHTML==rcodev){
+                          //二次判断--》前台判断(从后台拿到一个标识证明验证通过或不通过)
+                          if(json.uname==uname&&json.pwd==pwd){
+                              //对
+                             setTimeout(function(){
+                                    //跳转路径，可以传参 可以不传
+                                    window.location.href='sign up.html?fx='+json.id;
+                                },1000)
+                          }else{
+                               alert('用户名或密码不正确');
+                          }
+                    }else{
+                    	alert('验证码错误');
+                    }
+        }
+    </script>
+</body>
+</head>
+</html>

@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #007AAE;
+} 
+.logup{
+   width:440px;
+   height:272px;
+   background-color:#ffffff;
+   padding:40px;
+   box-shadow:0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+   margin:300px auto;
+}
+.logup input{
+   width:350px;
+   height: 49px;
+   background-color: #f2f2f2;
+   border:0;
+   box-sizing: border-box;
+   font-size: 14px;
+   margin-bottom:15px;
+   outline: none;
+   padding-left:15px;
+}
+.logup button{
+   width:100%;
+   height: 49px;
+   background-color: #007AAE;
+   outline: 0;
+   font-size: 14px;
+   cursor: pointer;
+   border:0;
+   color: #ffffff;
+   text-transform: uppercase;
+}
+.logup p{
+   width:100%;
+   height:16px;
+   margin-top:15px;
+   color:#b3b3b3;
+   font-size: 12px;
+   text-align: center;
+}
+.logup p>a{
+   color:#007AAE;
+   text-decoration: none;
+}

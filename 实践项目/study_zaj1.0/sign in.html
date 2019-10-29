@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="sign in .css">
+</head>
+<body>
+    <div class="warp">
+        <div class="login">
+             <input type="text" placeholder="用户名" id="name"><div class="mydiv" id="div"></div>
+             <input type="password" placeholder="密码" id="mm">
+             <input type="text" placeholder="验证码" id="in1"><div class="mydiv"></div><div class="mydiv"></div>
+             <button>登  录</button>
+             <p>还没有账户？<a href="sign up.html">立刻创建</a></p>
+        </div>
+    </div>
+    <script>
+         var name=document.getElementById('name');
+         var div=document.getElementById('div');
+         var mm=document.getElementById('mm');
+         var sname=name.toUpperCase();
+         mm.onclick=function(){
+             if(name!==sname){
+                div.innerHTML='请输入大写';
+             }else{
+                div.innerHTML='';  
+             }
+         }
+    </script>
+</body>
+</head>
+</html>
