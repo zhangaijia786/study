@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../jquery.min.js"></script>
+    <style>
+       div{
+           width: 200px;
+           height: 200px;
+           background-color: red;
+           margin:20px;
+       }
+       p{
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+       }
+    </style>
+</head>
+<body>
+    <div>
+        <p id="pp"></p>
+    </div>
+    <script>
+        //$("p").offset()   正对视窗元素的偏移位置
+       console.log($("#pp").offset({left:10}));//赋予值,需要加{},不用写px
+    </script>
+</body>
+</html>

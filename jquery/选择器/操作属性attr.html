@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../jquery.min.js"></script>
+</head>
+<body>
+    <div id='mydiv'>div</div>
+    <p class="abc">ppp</p>
+    <p class="dfg">ppp</p>
+    <img src="1.gif" alt="">
+    <a href="http://www.baidu.com">baidu</a>
+    <script>
+        // console.log($("a").attr("href","http://www.taobao.com"));
+                         //attr('属性名')//获取属性值
+                         //attr('属性名','属性值')//获取属性赋值
+                         //attr({ src: "test.jpg", alt: "Test Image" });   给多个属性赋值
+                         //removeAttr("src");    删除一个元素的属性,而不是它的值
+        var ist=true;
+        $("img").click(function(){
+            $(this).attr('src',function(){
+                if(ist){
+                    ist=false;
+                    return '2.jpg';
+                }else{
+                    ist=true;
+                    return '1.gif';
+                }
+            })
+        })
+    </script>
+</body>
+</html>

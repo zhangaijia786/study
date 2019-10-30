@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../jquery.min.js"></script>
+</head>
+<body>
+    <div data-tf="yes" id="a">html超文本标记语言</div>
+    <div data-tf="no" id="b">html是一个压缩包</div>
+    <script>
+        console.log($("#a").data("tf"));
+        //data()参数中写标签里data-后面的名字,可以回去自定义属性的值
+        
+        $("#a").data("tf","wx");
+        //data()参数1需要修改或者添加的自定义属性,第二个参数写值
+    </script>
+</body>
+</html>

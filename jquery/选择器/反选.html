@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../jquery.min.js"></script>
+</head>
+<body>
+    <input type="checkbox" name="" id="quan">all
+    <input type="checkbox" name="" id="fan">fan<br>
+    <input type="checkbox" name="ball" class="aa">足球
+    <input type="checkbox" name="ball" class="aa">篮球
+    <input type="checkbox" name="ball" class="aa">排球
+    <script> 
+        $("#fan").change(function(){
+            $("#quan").prop('checked')
+            
+        })
+    </script>
+</body>
+</html>

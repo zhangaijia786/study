@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../jquery.min.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        li{
+            list-style: none;
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            margin:10px;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <div id="mydiv"></div>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <p class="p">明天</p>
+    <div>会更好</div>
+    <script>
+    //    var mydiv=document.getElementById('mydiv');
+    //    var lis=document.getElementsByTagName('li');
+    //    for(var i=0;i<lis.length;i++){
+    //        lis[i].onclick=function(){
+    //            this.style.backgroundColor='blue';
+    //        }
+    //    }
+         $("li").click(function(){
+             $(this).css({"background-Color":"blue"});
+         })
+   
+
+       console.log(mydiv);
+       console.log( $("mydiv"));
+       console.log($(".p"));
+       console.log($("div"));
+    </script>
+</body>
+</html>

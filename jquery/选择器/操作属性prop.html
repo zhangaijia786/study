@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../jquery.min.js"></script>
+</head>
+<body>
+    <input type="checkbox" name="" id="quan">all<br>
+    <input type="checkbox" name="ball">足球
+    <input type="checkbox" name="ball">篮球
+    <input type="checkbox" name="ball">排球
+    <script>
+            // $("#che").prop("checked"); 
+            $("#quan").change(function(){
+               if($("#quan").prop('checked')){
+                    $("[name=ball").prop('checked',true);
+               }else{
+                    $("[name=ball").prop('checked',false);
+               }
+            })
+    </script>
+</body>
+</html>

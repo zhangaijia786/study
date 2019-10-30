@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../jquery.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+    </ul>
+    <div>
+        <p>
+            <span>span</span>
+             <a href="#">aaa</a>
+        </p>
+        <p>
+            <a href="#">bbb</a>
+            <i>gvhjkmdfhgbjk</i>
+        </p>
+    </div>
+    <script>
+        $("div span,a,i").css({"color":"red"});
+        $("div>p:nth-child(1)>a").css({"color":"blue"});
+        $("li:nth-child(2)").css({"color":"red"});
+    </script>
+</body>
+</html>
