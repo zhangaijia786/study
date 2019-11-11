@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="uname"><br>
+    <input type="password" id="pwd"><br>
+    <button id="btn">提交</button>
+    <script>
+        var btn=document.getElementById('btn');
+        
+        btn.onclick=function(){
+            var uname=document.getElementById('uname').value; 
+            var pwd=document.getElementById('pwd').value;
+            ajax({
+                // username:uname,
+                // pass:pwd
+                type:"POST",
+                url:"./2.php",
+                data:{name:uname,pass:pwd},
+                //成功   返回数据
+                success:function(res){
+                    alert(res);
+                },
+                //失败
+                error:function(err){
+                    console.log(err);
+                }
+            });
+        }
+        function ajax(ajaxObj){
+            // console.log(ajaxObj);
+            if(window.XMLHttpRequest){
+                 var xhr=new XMLHttpRequest();
+            }else{
+                 var xhr=new ActiveXObject('Microsoft.XMLHTTP');
+            }
+            
+        //  console.log( jsonToStr(ajaxObj.data));   字符串
+            xhr.open(ajaxObj.type,ajaxObj.url,true);
+            xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded",'charset=utf-8');
+            xhr.send(jsonToStr(ajaxObj.data));
+
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4){
+                    if(xhr.status >=200 && xhr.status <300){
+                         //返回成功
+                         if(ajaxObj.success){
+                             ajaxObj.success(xhr.responseText);
+                         }
+                    }else{
+                         //返回失败
+                         xhr.onerror(function(){
+                            if(ajaxObj.error){
+                                 ajaxObj.error(err);
+                            }
+                         })
+                    }
+                }
+            }
+        }
+
+        //将对象转换成字符串(路径格式)
+        function jsonToStr(dataJson){
+            //创建数组
+            var arr=[];
+            //for  in  遍历输入的内容
+            for(var i in dataJson){
+                // console.log('1'+i);          //i是属性名
+                // console.log(dataJson[i])        //i是属性值
+                // 对象中的拼接
+                arr.push(i+'='+dataJson[i]);
+                
+            }
+            //console.log(arr);
+            //将数组转换为字符串并用$连接,用join
+            return arr.join('&');
+            // return a
+        }
+    </script>
+</body>
+</html>

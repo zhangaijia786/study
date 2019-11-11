@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="uname"><br>
+    <input type="password" id="pwd"><br>
+    <button id="btn">提交</button>
+    <script>
+        var btn=document.getElementById('btn');
+
+       
+
+        btn.onclick=function(){
+            var uname=document.getElementById('uname').value; 
+            var pwd=document.getElementById('pwd').value;
+            ajax({
+                // username:uname,
+                // pass:pwd
+                type:"GET",
+                url:"./1.php",
+                data:"name="+uname+"&pass="+pwd,
+                //成功   返回数据
+                success:function(responseText){
+                    alert(responseText);
+                },
+                //失败
+                error:function(err){
+                    console.log(err);
+                }
+            });
+        }
+        function ajax(ajaxObj){
+            console.log(ajaxObj);
+            if(window.XMLHttpRequest){
+                 var xhr=new XMLHttpRequest();
+            }else{
+                 var xhr=new ActiveXObject('Microsoft.XMLHTTP');
+            }
+
+            xhr.open(ajaxObj.type,ajaxObj.url+'?'+ajaxObj.data,true);
+            xhr.send();
+
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4){
+                    if(xhr.status >=200 && xhr.status <300){
+                         //返回成功
+                         if(ajaxObj.success){
+                             ajaxObj.success(xhr.responseText);
+                         }
+                    }else{
+                         //返回失败
+                         xhr.onerror(function(){
+                            if(ajaxObj.error){
+                                 ajaxObj.error(err);
+                            }
+                         })
+                         
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

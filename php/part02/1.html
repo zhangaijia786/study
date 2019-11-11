@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html中的表单</title>
+    <style>
+        input{
+            margin-bottom:8px;
+        }
+    </style>
+</head>
+<body>
+    <form action="./1.php" method="POST">
+        <input type="text" name="uname" placeholder="请输入用户名"><br>
+        <input type="password" name="pwd" placeholder="请输入密码"><br>
+        <input type="submit">
+    </form>
+    <!-- 在html文件中的表单   action="提交路径,注意:同级目录需要/"
+         method="提交方式"     GET   POST
+         提交内容需要的标签name属性
+         必须有用于提交的元素   <input type="submit">
+     -->
+</body>
+</html>
